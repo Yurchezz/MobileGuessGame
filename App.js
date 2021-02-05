@@ -50,7 +50,7 @@ class App extends React.Component {
         'cry',
         'cry',
       ]
-  
+
     };
     // 'worried', 'smile'
   }
@@ -86,7 +86,7 @@ class App extends React.Component {
             setTimeout(() => {
             this.handleLevelChange()
             },500);
-            
+
           }
         }
       }
@@ -95,16 +95,16 @@ class App extends React.Component {
   };
   handleLevelChange = () => {
 
-   
+
     this.resetFlips();
-   
+    console.log("Hello World");
     this.setState({memes: this.memes})
-     
-    
+
+
 
   }
   componentDidMount (){
-      
+
   }
   resetFlips = () => {
 
@@ -113,7 +113,7 @@ class App extends React.Component {
       if (  this.cards[`${mem}-${index}`].flipped) {
         this.cards[`${mem}-${index}`].card.flip();
         this.cards[`${mem}-${index}`].flipped = false;
-      
+
       }
       if(this.cards[`${mem}-${index}`].paired){
         this.cards[`${mem}-${index}`].paired = false;
@@ -123,7 +123,7 @@ class App extends React.Component {
   };
   render() {
     // const content = (
-      
+
     // )
     return (
       <>
@@ -171,7 +171,7 @@ class App extends React.Component {
                 </CardFlip>
               );
             })}
-           
+
             <View style={styles.reset}>
               <TouchableOpacity
                 onPress={() => {
